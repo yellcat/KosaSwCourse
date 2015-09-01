@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<script>
+	//브라우저 실행 후 아래 문구실행/window dr
+		window.onload = function(){
+			/* var header = document.getElementById('header'); */
+			var headerArray = document.querySelectorAll("h1");
+
+			for(var i=0;i<headerArray.length;i++){
+				headerArray[i].style.color = "orange";
+				headerArray[i].style.background = "red";
+				headerArray[i].innerHTML = "From JavaScript";
+			}
+			
+		}
+	</script>
+	<body>
+		<!-- <h1 id = "header">Header</h1> -->
+		<h1>Header</h1>
+		<h1>Header</h1>
+		<h1>Header</h1>
+	</body>
+</html>

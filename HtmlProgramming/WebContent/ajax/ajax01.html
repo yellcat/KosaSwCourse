@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn1").on("click", function(){
+					console.log("비동기통신시작")
+					$.ajax("ajax01.jsp",{
+						/* async : false, *///동기 통신
+						success:function(){
+							console.log("콜")
+						}
+					});
+					 $.ajax({
+						url:"ajax01.jsp",
+						success:function(){
+							console.log("콜")
+						}
+					});
+					console.log("계속계속")
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn1">기본ajax통신</button>
+		<hr/>
+		<div id="result1" 
+			style="width:300px; height:150px; border:1px solid black">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+@font-face {
+	font-family: 'NanumGothic';
+	src: url('images/NanumGothic.eot?#iefix') format('embedded-opentype'),
+		url('images/NanumGothic.woff') format('woff'),
+		url('images/NanumGothic.ttf') format('truetype');
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	color: white;
+	font-family: NanumGothic;
+	text-decoration: none;
+}
+
+body {
+	width: 920px;
+	margin: 0 auto; /*중앙정렬(top bottom 0/left=right auto)*/
+	background-color: rgba(f5,3f,68,0.3);
+	/* background-image: url(straw.png); */
+}
+
+#page-wrapper {
+	
+	background-image: url(berry.jpg);
+	margin: 40px 0px;
+	
+	flex-direction:column;
+	padding: 10px 20px;
+	
+	display:flex;
+}
+
+header {
+	margin-bottom: 10px;
+	height:40px;
+}
+
+nav {
+	margin-bottom:10px;
+	height:35px;
+	
+	border-top: 1px solid #C8C8C8;
+	border-bottom: 1px solid #C8C8C8;
+	
+	display: flex;
+	flex-direction: row;
+}
+
+.menu {
+	margin: 5px;
+	padding: 0 5px;
+}
+
+#content {
+	flex:1;
+	display: flex;
+	flex-direction: row;
+}
+
+section {
+	background-color: rgb(239, 218, 201);
+	flex: 1;
+	height:600px;
+}
+
+iframe {
+	width: 100%;
+	height :100%;
+/* 	height: 300px; */
+	border: none;
+}
+
+aside {
+	/* display:inline-block; */
+	width: 200px;
+	height:600px;
+	background-color: rgb(235, 144, 150);
+	border-right: 1px solid #C8C8C8;
+	overflow-y : scroll;
+}
+
+#category {
+	color: white;
+}
+
+#category>.chapter {
+	font-weight: bold;
+}
+
+#category>a {
+	margin: 5px auto;
+	color: white;
+	display: block;
+	background-color: rgb(229, 92, 108);
+	border-radius: 30px;
+}
+
+#category>a:hover, #category>a:focus {
+	background-color: rgba(229, 92, 108, 0.5);
+	color: rgb(229, 92, 108);
+}
+
+footer {
+	text-align: right;
+	height: 50px;
+	/* border-top: 1px solid #C8C8C8; */
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type = "text/javascript" src = "jquery-1.11.3.min.js"></script>
+		<script type = "text/javascript">
+			$(function(){
+				$("#btn1").click(function(){
+					console.log("btn-click");
+				});
+				$("#btn2").on("click", function(){
+					console.log("btn-click");
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<button id="btn1"> 버튼1 </button>
+		<button id="btn2"> 버튼2 </button>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<!-- 로딩과 동시에 실행되는 부분: $(변수인 동시에 함수 : window 객체) 사용 가능 -->
+		<script type = "text/javascript" src = "jquery-1.11.3.min.js"></script>
+		<script type = "text/javascript">
+			window.onload = function(){//전부 다 불러오기
+				console.log("window.onload");
+			};
+			$(document).ready(function(){//용량이 큰 건 제외
+				console.log("ready");
+			});
+			
+			function imgLoad(){
+				console.log("img-load");
+			}</script>
+	</head>
+	<body>
+	<!--  -->
+		<img onload="imgLoad()" id = "bigbuck" src="BigBuck.png"/>
+		<img onload="imgLoad()" id = "bigbuck" src="BigBuck.png"/>
+	</body>
+</html>

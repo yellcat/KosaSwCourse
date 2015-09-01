@@ -1,0 +1,36 @@
+*{
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+#pagewrapper{
+	height:100vh;	
+	display:flex;
+	flex-direction: column;
+	margin: 40px auto;
+}
+#top{
+	height: 40px;
+	background: #d8d8d8;
+}
+#content{
+	display: flex;
+	flex:1;
+}
+#center{
+	background: white;
+	flex:1;
+	overflow-y: scroll;
+}
+#left{
+	width: 200px;
+	background: #c8c8c8;
+}
+#right{
+	width:200px;
+	background: #c8c8c8;
+}
+#bottom{
+	height: 40px;
+	background: #d8d8d8;
+}

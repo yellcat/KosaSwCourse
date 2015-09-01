@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type = "text/javascript" src = "jquery-1.11.3.min.js"></script>
+		<script type = "text/javascript">
+			$(function(){
+				/* var joinForm = document.joinForm;
+				jpinform.onsubmit = function(){};
+				
+				var username = document.joinForm.userName;
+				
+				if(userName.valuse == ""){
+					alert("입력을 하세요!");
+					return false;
+				} */
+				$("#joinForm").submit(function(event){
+					var value = $("#userName").val();
+					if(value == ""){
+						alert("입력하세요!");
+						//return false;
+						event.preventDefault();
+					}else if(value.replace(/[ㄱ-힣]/g, '').length!=0){
+						alert("한글만 입력하세요!");
+						return false;
+					}
+					
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<form id ="joinForm" name="joinForm" method="psot" action="#">
+			<label>이름</label>
+			<input id = "userName" name = "username" type="text" value=""/>
+			<input type="submit"/>
+		</form>
+	</body>
+</html>

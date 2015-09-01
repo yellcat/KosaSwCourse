@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var member = {
+					//속성(properties)
+					id:"winter",
+					name: "egg",
+					age: 10,
+			};
+			console.log(member.id);
+			console.log(member.name);
+			console.log(member.age);
+			console.log("----------");
+			console.log(member["id"]);
+			console.log(member["name"]);
+			console.log(member["age"]);
+			console.log("----------");
+			for(var prop in member){
+				console.log(member[prop]);
+			}
+		</script>
+	</body>
+</html>

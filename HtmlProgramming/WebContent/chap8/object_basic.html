@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var member = {
+					id:"winter",
+					name: "egg",
+					age: 10,
+					//메소드
+					getId: function(){return this.id;},
+					setId: function(id){this.id=id;},
+					getName: function() {return this.name;}
+			};
+			console.log(member.id);
+			member.id = "roe";
+			console.log(member.id);
+			console.log(member.getId());
+			member.setId("fall");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type = "text/javascript" src = "jquery-1.11.3.min.js"></script>
+		<script type = "text/javascript">
+			/* 
+			function func1(){
+				console.log("link2-click");
+				return false;
+			}; */
+			$(function (){
+				var link1 = document.querySelector("#link1");
+				link1.onclick = function(){
+					return false;
+				}
+				/* $("#link2").click(function(){
+					console.log("link1-click");
+					return false;
+				}); */
+				$("#link2").click(function(event){
+					console.log(event);
+					//return false;
+					event.preventDefault();
+				});
+			});			
+		</script>
+	</head>
+	<body>
+		<a id = "link1" href="http://www.naver.com">1 네이버</a>
+		<a id = "link2" href="http://www.naver.com">2 네이버</a>
+		<!-- <a id = "link2" href="http://www.naver.com" onclick="return func1()">2 네이버</a> -->
+	</body>
+</html>
