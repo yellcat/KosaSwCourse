@@ -28,24 +28,16 @@
 	</head>
 	<body>
 		<form method="post" action="write">
-			<table id="formtable">
-				<tr>
-					<td class="title">품명</td>
-					<td><input type="text" name="name"/></td>
-				</tr>
-				<tr>
-					<td class="title">가격</td>
-					<td><input type="number" name="price"/></td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<br/>
-						<input type="submit" value="글 올리기"/>
-						<input type="reset" value="다시 작성"/>
-					</td>
-				</tr>
-			</table>
-			
+			<div>
+				<span class="title">품명</span>
+				<span class="content"><input type="text" name="name"/></span>
+				<span class="title">가격</span>
+				<span class="content"><input type="number" name="price"/></span>
+			</div>
+			<div id="buttonGroup">
+				<input type="submit" value="글 올리기"/>
+				<input type="reset" value="다시 작성"/>
+			</div>			
 		</form>
 	</body>
 </html>

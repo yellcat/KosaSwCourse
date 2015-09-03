@@ -76,7 +76,7 @@
 			<span class="content"><pre>${board.content}</pre></span><br/>
 		</div>
 		<div id="buttonGroup">
-			<a href="writeForm">글쓰기</a>
+			<a href="updateForm">수정</a>
 		</div>
 	</body>
 </html>
