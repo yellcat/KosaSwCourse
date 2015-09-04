@@ -70,28 +70,28 @@ public class BoardDao {
 		);
 		return list;
 	}
-
 	public Board selectByPk(int boardNo)  {
+		
 		String sql = "select * from boards where board_no = ?";
 		Board board = jdbcTemplate.queryForObject(
 				sql,
 				new Object[]{boardNo},
 				new RowMapper<Board>(){
-
+					
 					@Override
 					public Board mapRow(ResultSet rs, int rowNo) throws SQLException  {
 						Board board = new Board();
-						if (rs.next()) {
-							board.setNo(rs.getInt("board_no"));
-							board.setTitle(rs.getString("board_title"));
-							board.setContent(rs.getString("board_content"));
-							board.setWriter(rs.getString("board_writer"));
-							board.setDate(rs.getDate("board_date"));
-							board.setHitcount(rs.getInt("board_hitcount"));
-							board.setOriginalFileName(rs.getString("board_original_file_name"));
-							board.setFilesystemName(rs.getString("board_filesystem_name"));
-							board.setContentType(rs.getString("board_content_type"));
-						}
+						
+						board.setNo(rs.getInt("board_no"));
+						board.setTitle(rs.getString("board_title"));
+						board.setContent(rs.getString("board_content"));
+						board.setWriter(rs.getString("board_writer"));
+						board.setDate(rs.getDate("board_date"));
+						board.setHitcount(rs.getInt("board_hitcount"));
+						board.setOriginalFileName(rs.getString("board_original_file_name"));
+						board.setFilesystemName(rs.getString("board_filesystem_name"));
+						board.setContentType(rs.getString("board_content_type"));
+						
 						return board;
 					}				
 				}

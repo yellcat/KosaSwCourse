@@ -34,4 +34,8 @@ public class ProductService {
 	public void delete(int productNo){
 		pdao.delete(productNo);
 	}
+	
+	public int getTotalproductNo(){
+		return pdao.selectCount();
+	}
 }

@@ -16,7 +16,7 @@
 		</style>
 	</head>
 	<body>
-		<form method="post" action="write">
+		<form method="post" action="write" enctype="multipart/form-data"/>
 			<table id="formtable">
 				<tr>
 					<td>제목</td>
@@ -30,10 +30,10 @@
 					<td>내용</td>
 					<td><textarea name="content" rows="5" cols="50"></textarea></td>
 				</tr>
-				<!-- <tr>
+				<tr>
 					<td>첨부파일</td>
 					<td><input type="file" name="attach"/></td>
-				</tr> -->
+				</tr>
 				<tr>
 					<td colspan="2" style="text-align:center">
 					<br/>

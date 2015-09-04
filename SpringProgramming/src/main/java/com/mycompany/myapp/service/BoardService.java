@@ -27,7 +27,7 @@ public class BoardService {
 		return board;
 	}
 	
-	public void modify(Board board) {
+	public void update(Board board) {
 		boardDao.update(board);
 	}
 	

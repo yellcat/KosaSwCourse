@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>Home</title>
-		<link rel="stylesheet" href="resources/form.css"/>
+		<link rel="stylesheet" href="resources/css/form.css"/>
 	</head>
 	
 	<body>

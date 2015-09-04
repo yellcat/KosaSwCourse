@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
@@ -40,6 +39,7 @@
 				margin-right:10px;
 			}
 			#part1_2 img{
+				width:100%;
 				display:block;
 				padding:10px;
 			}
@@ -66,9 +66,13 @@
 				<span class="title">날짜: </span>
 				<span class="content">${board.date}</span><br/>
 				<span class="title">조회수: </span><span class="content">${board.hitcount}</span><br/>
-				<!-- <span class="title">첨부파일: </span>
-				<span class="content"><a target="_blank" href="../uploadfiles/$(board.getFilesystemName())")/>
-				$(board.getOriginalFileName() )</a></span><br/> -->
+				<span class="title">첨부파일: </span>
+				<span class="content">${board.originalFileName}</span><br/>
+			</div>
+			
+			<div id="part1_2">
+				<img src="${pageContext.request.contextPath}/resources/uploadfiles/${board.filesystemName}"/>
+				<button>다운로드</button>
 			</div>
 		</div>
 		<div id="part2">
@@ -76,7 +80,9 @@
 			<span class="content"><pre>${board.content}</pre></span><br/>
 		</div>
 		<div id="buttonGroup">
-			<a href="updateForm">수정</a>
+			<a href="list?pageNo=${pageNo}">목록</a>
+			<a href="updateForm?boardNo=${board.no}">수정</a>
+			<a href="delete?boardNo=${board.no}">삭제</a>
 		</div>
 	</body>
 </html>

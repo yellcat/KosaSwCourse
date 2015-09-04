@@ -108,15 +108,15 @@
 			<div id="pager">
 	            <a href="list?pageNo=1">[처음]</a>
 	            <c:if test="${groupNo>1 }">
-	            <a href="list?pageNo=${startPageNo-pagesPerGroup}">[이전]</a>//컨트롤러에서 만들어줘야할 변수
+	            <a href="list?pageNo=${startPageNo-pagesPerGroup}">[이전]</a><!-- 컨트롤러에서 만들어줘야할 변수 -->
 	            </c:if>
 	            
 	            <c:forEach var="i" begin="${startPageNo}" end="${endPageNo}">
-	               <a class='pageNo <c:if test="${pageNo==i}">selected</c:if>' href="list?boardNo=${i}">${i}</a>
+	               <a class='pageNo <c:if test="${pageNo==i}">selected</c:if>' href="list?pageNo=${i}">${i}</a>
 	            </c:forEach>
 	               
 	            <c:if test="${groupNo<totalGroupNo}">
-	            <a href="list?pageNo=">[다음]</a>
+	            <a href="list?pageNo=${startPageNo+pagesPerGroup}">[다음]</a>
 	            </c:if>
 	            <a href="list?pageNo=${totalPageNo}">[맨끝]</a>
 	         </div>

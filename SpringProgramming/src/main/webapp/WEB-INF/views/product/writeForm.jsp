@@ -11,28 +11,35 @@
 			}
 			input{
 				font-size = 12px;
-				background-color: white;
 			}
-
-			td{
-				text-align: center;
+			div{
+				margin: 10px;
 			}
-			td.title {
+			span{
+				display: inline-block;
+				margin: 5px;
+			}
+			.title {
+				display: inline-block;
 				width: 100px;
+				height: 30px;
 				text-size: small;
 				background-color: rgb(89,94,113);
 				color:white;
+				text-align: center;
 			}
 			
 		</style>
 	</head>
 	<body>
-		<form method="post" action="write">
+		<form method="post" action="write" enctype="multipart/form-data"/>
 			<div>
 				<span class="title">품명</span>
-				<span class="content"><input type="text" name="name"/></span>
+				<span class="content"><input type="text" name="name"/></span><br/>
 				<span class="title">가격</span>
-				<span class="content"><input type="number" name="price"/></span>
+				<span class="content"><input type="number" name="price"/></span><br/>
+				<span class="title">상품 이미지</span>
+				<span class="content"><input type="file" name="attach"/></span><br/>
 			</div>
 			<div id="buttonGroup">
 				<input type="submit" value="글 올리기"/>
