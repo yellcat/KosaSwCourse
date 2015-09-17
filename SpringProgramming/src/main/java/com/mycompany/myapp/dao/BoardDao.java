@@ -70,6 +70,7 @@ public class BoardDao {
 		);
 		return list;
 	}
+	
 	public Board selectByPk(int boardNo)  {
 		
 		String sql = "select * from boards where board_no = ?";
