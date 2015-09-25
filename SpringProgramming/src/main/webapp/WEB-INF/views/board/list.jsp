@@ -97,7 +97,7 @@
 			<c:forEach var="board" items="${list}">
 				<tr>
 					<td>${board.no}</td>
-					<td><a href="detail?boardNo=${board.no}">${board.title}</a></td>
+					<td><a href="detail/${board.no}">${board.title}</a></td>
 					<td>${board.writer}</td>
 					<td>${board.date}</td>
 					<td>${board.hitcount}</td>
@@ -125,11 +125,3 @@
 		</div>
 	</body>
 </html>
-
-
-
-
-
-
-
-

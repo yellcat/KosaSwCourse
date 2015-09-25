@@ -24,14 +24,14 @@
 			<div id="content2">
 				<div id="menu">
 					<ul>
-						<h4>Chap07</h4>
+						<li><h4>Chap07</h4></li>
 						<li><a href="#">1절. XXXXXX</a></li>
 						<li><a href="#">2절. XXXXXX</a></li>
 						<li><a href="#">3절. XXXXXX</a></li>
 					</ul>
 					
 					<ul>
-						<h4>스프링 게시판</h4>
+						<li><h4>스프링 게시판</h4></li>
 						<li><a href="board/list" target="iframe">일반 게시판</a></li>
 						<li><a href="photo/list" target="iframe">사진 게시판</a></li>
 						<li><a href="file/list" target="iframe">자료 게시판</a></li>

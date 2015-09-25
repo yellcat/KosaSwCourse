@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset=UTF-8">
+		<meta charset=UTF-8>
 		<title>Insert title here</title>
 		<style>
 			span{
@@ -82,7 +82,7 @@
 		<div id="buttonGroup">
 			<a href="list?pageNo=${pageNo}">목록</a>
 			<a href="updateForm?boardNo=${board.no}">수정</a>
-			<a href="delete?boardNo=${board.no}">삭제</a>
+			<a href="delete/${board.no}">삭제</a>
 		</div>
 	</body>
 </html>

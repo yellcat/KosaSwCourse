@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset=UTF-8">
+		<meta charset=UTF-8>
 		<title>Insert title here</title>
 		<!-- <link rel="stylesheet" href="resources/iframe_style.css"> -->
 		<style>
@@ -16,7 +16,7 @@
 		</style>
 	</head>
 	<body>
-		<form method="post" action="write" enctype="multipart/form-data"/>
+		<form method="post" action="write" enctype="multipart/form-data">
 			<table id="formtable">
 				<tr>
 					<td>제목</td>
@@ -42,7 +42,6 @@
 					</td>
 				</tr>
 			</table>
-			
 		</form>
 	</body>
 </html>

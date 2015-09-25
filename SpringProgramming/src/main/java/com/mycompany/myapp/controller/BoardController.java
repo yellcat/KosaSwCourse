@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.List;
 
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -12,9 +11,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.mycompany.myapp.dto.Board;
 import com.mycompany.myapp.service.BoardService;
@@ -25,7 +25,7 @@ public class BoardController {
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 
 	@Autowired
-	private BoardService boardservice;//객체를 생성해주지 않아도 Autowired를 통해 생성
+	private BoardService boardservice;//媛앹껜瑜� �깮�꽦�빐二쇱� �븡�븘�룄 Autowired瑜� �넻�빐 �깮�꽦
 	
 	@RequestMapping("board/list")
 	public String list(@RequestParam(defaultValue="1") int pageNo, Model model, HttpSession session){
@@ -64,8 +64,8 @@ public class BoardController {
 		return "board/list";
 	}
 	
-	@RequestMapping("board/writeForm")
-	public String writeForm(){
+	@RequestMapping(value = "board/write", method = RequestMethod.GET)
+		public String write(){
 		logger.info("writeForm()");
 		return "board/writeForm";
 	}
@@ -74,18 +74,18 @@ public class BoardController {
 	public String write(
 		Board board,
 		HttpSession session){
-		//parameter 명과 매개변수 명이 일치할 때 값이 들어온다
+		//parameter 紐낃낵 留ㅺ컻蹂��닔 紐낆씠 �씪移섑븷 �븣 媛믪씠 �뱾�뼱�삩�떎
 		
 		logger.info("write()");
 		
-		//첨부파일을 하드에 저장
+		//泥⑤��뙆�씪�쓣 �븯�뱶�뿉 ���옣
 		ServletContext application = session.getServletContext();
 		String dirPath = application.getRealPath("/resources/uploadfiles");
 		String originalFilename = board.getAttach().getOriginalFilename();
 		String filesystemName = System.currentTimeMillis() + "-" + originalFilename;
 		String contentType = board.getAttach().getContentType();
 		
-		//파일에 저장하기
+		//�뙆�씪�뿉 ���옣�븯湲�
 		if(!board.getAttach().isEmpty()){
 			try {
 				board.getAttach().transferTo(new File(dirPath+"/"+filesystemName));
@@ -94,7 +94,7 @@ public class BoardController {
 			}
 		}
 		
-		//database에 게시물 정보 저장
+		//database�뿉 寃뚯떆臾� �젙蹂� ���옣
 		/*Board board = new Board();
 		board.setTitle(title);
 		board.setWriter(writer);
@@ -126,16 +126,16 @@ public class BoardController {
 		return "redirect:/board/detail?boardNo="+board.getNo();
 	}
 	
-	@RequestMapping("board/detail")
-	public String detail(int boardNo, Model model){
+	@RequestMapping("board/detail/{boardNo}")
+	public String detail(@PathVariable("boardNo") int boardNo, Model model){
 		logger.info("detail()");
 		Board board = boardservice.getBoard(boardNo);
 		model.addAttribute("board", board);
 		return "board/detail";
 	}
 	
-	@RequestMapping("board/delete")
-	public String delete(int boardNo){
+	@RequestMapping("board/delete/{boardNo}")
+	public String delete(@PathVariable("boardNo") int boardNo){
 		logger.info("detail()");
 		boardservice.delete(boardNo);
 		return "redirect board/list";
