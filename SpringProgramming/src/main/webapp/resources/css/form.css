@@ -1,0 +1,106 @@
+@import url("https://googledrive.com/host/0BxmAw3HA4YGCfnE1U2tYVjN2UkVLWnEzaVdsWDRUZ3VFbmpJckF3UG56WkpLSUxKMXFaTlU/nanumbarunpenb.css");
+			/*------------------------------------*/
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			/*------------------------------------*/
+			body{
+				background-image: url("../image/background.jpg");
+			}
+			#pagewrapper {
+				width: 960px;
+				margin: 0px auto;
+				color: #FFFFFF;
+			}
+			/*------------------------------------*/				
+			#page {
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+			/*------------------------------------*/			
+			#header {
+				margin: 20px /* 0px */;
+				font-family: 'nanumbarunpenb', cursive;
+				text-decoration: none;
+				/* font-style: italic; */
+			}
+			#content1 {
+				height: 200px;
+				display: flex;
+			}
+			#content2 {
+				flex: 1;
+				margin-top: 10px;
+				min-height: 300px;
+				display: flex;
+				
+			}
+			#footer {
+				margin: 20px 0px;
+			}			
+			/*------------------------------------*/	
+			#content1 #login {
+				width: 250px;
+				border: 3px solid #655143;	
+				border-radius: 10px;			
+			}
+			
+			#content1 #frontImage {
+				flex: 1;
+				border: 3px solid #655143;
+				border-radius: 10px;
+				margin-left: 10px;
+				padding: 10px;
+			}
+			
+			#content1 #frontImage img {
+				width: 665px;
+				height: 175px;
+			}
+
+			/*------------------------------------*/
+			#content2 #menu {
+				width: 250px;
+				border: 3px solid #655143;	
+				border-radius: 10px;
+				padding: 10px;
+				overflow-y: scroll;
+				background-color: rgba(131,98,91,0.5);
+				font-family: nanumbarunpenb, cursive;
+			}
+			
+			#content2 #menu ul {
+				margin-top: 10px;
+			}
+			
+			#content2 #menu ul h4 {
+				margin-top: 10px;
+			}
+			
+			#content2 #menu a {
+				display:block;
+				margin: 1px 10px 1px 20px;
+				text-decoration: none;
+				font-size: small;
+				color: white;
+			}
+			
+			#content2 #menu a:hover {
+				color: orange;
+			}
+			
+			#content2 #content {
+				flex: 1;	
+				margin-left: 10px;		
+				position: relative;		
+			}
+			
+			#content2 #content iframe {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				border: none;
+				background-color: rgba(131,98,91,0.5);
+			}
