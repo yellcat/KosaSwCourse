@@ -118,10 +118,6 @@
             }
             $("#console").scrollTop($("#console").height());
         }
-		
-		function send(){
-			
-		}
  
 	    function disconnect(){
 			if(ws!=null){
